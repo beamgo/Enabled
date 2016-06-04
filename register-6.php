@@ -163,7 +163,7 @@ Header($ExpStr);
 <div class="row">
                 
                     <div class="col-lg-12" align="center"><br><br>
-                    <button><a href="reg-completed.php" >บันทึก</a></button>
+                    <button><a href="mainpageafterlogin.php.php" >บันทึก</a></button>
                     <br><br>
                     </div>
                 </div>

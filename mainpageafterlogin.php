@@ -21,7 +21,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <title>Homepage</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -177,7 +177,7 @@ session_start();
 
     <!-- รูปบริการต่างๆ -->
     <div class="container">
-        <div class="intro-header" style="padding:50px">
+        <div class="intro-header2" style="padding:50px">
 
             <br>
             <br>

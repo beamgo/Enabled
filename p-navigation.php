@@ -10,11 +10,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="p-main.php">Enabled Project</a>
+                <a class="navbar-brand topnav" href="mainpageafterlogin.php">
+                    <img style="max-width:100px; margin-top: -9px;" src="img/logo-small.png">
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="p-search.php.php">ค้นหางาน</a>
+                    </li>
                     <li> <?php    
 	   $servername = "localhost";
 		$name = "root";
