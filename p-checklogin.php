@@ -79,7 +79,7 @@ Header($ExpStr);
 			echo "สำเร็จ";
             echo "
  				<html>
-   					<meta http-equiv=\"Refresh\" content=\"2; URL=p-main.php\">
+   					<meta http-equiv=\"Refresh\" content=\"2; URL=mainpageafterlogin.php\">
  				</html>
  			"; 
             

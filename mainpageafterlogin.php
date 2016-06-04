@@ -65,10 +65,10 @@ session_start();
 <body>
 
 <!-- Navigation -->
-<?php include 'header.php'; ?>
+<?php include 'p-navigation.php'; ?>
 
 <br>
-
+<br>
 
 <!-- Header -->
 <div class="intro-header" style="padding:50px">
@@ -83,10 +83,8 @@ session_start();
             <h1 align="left">สังคมเพื่อคนพิการ</h1>
             <h1 align="left">ในการพัฒนาตนเอง เพื่อโอกาสในการหางาน</h1>
             <br>
-            <h2 align="left">สมัครสมาชิก</h2>
-            <button type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px">ผู้พิการ</button>
-            <button type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px;margin-left:20px">ผู้ประกอบการ</button>
-
+            <br>
+            <br>
 
             <!--
             <a class="btn btn-primary" type="submit" role="button">ค้นหา</a>
