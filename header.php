@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top " role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
     <div class="container">
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -38,7 +38,7 @@
                     </li>
                 <?php } else { ?>
                     <li>
-                        <a class="navbar-inverse" href="firstpage.php">หน้าหลัก</a>
+                        <a class="navbar-default" href="firstpage.php">หน้าหลัก</a>
                     </li>
                 <?php } ?>
             </ul>

@@ -10,7 +10,7 @@ session_start();
         p.margin {
             margin: 4cm 4cm 3cm 4cm
         }
-        
+
     </style>
 
 
@@ -21,7 +21,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Start Page</title>
+    <title>Landing Page - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,21 +40,21 @@ session_start();
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-      <style>
-       
+
+    <style>
+
         .button_big{
             background-color:#E0E0E0;border:0px;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             padding:10px;
         }
-          .circle_img{
-              border-radius: 100px;
-              width:200px;
-              height: 200px;
-              margin-bottom:25px;
-          }
+        .circle_img{
+            border-radius: 100px;
+            width:200px;
+            height: 200px;
+            margin-bottom:25px;
+        }
     </style>
 
 
@@ -65,70 +65,42 @@ session_start();
 <body>
 
 <!-- Navigation -->
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
-    <div class="container">
-            <a class="navbar-brand page-scroll" rel="home" href="#" title="Buy Sell Rent Everyting">
-                <img style="max-width:100px; margin-top: -9px;"
-                     src="img/logo-small.png">
-            </a>
-        <form class="navbar-form navbar-right" action="p-checklogin.php" method="post">
-            <?// php echo $_SESSION["pid"]; ?>
-            <div class="form-group">
-                อีเมลล์ : <input name="pemail" type="text" class="form-control" placeholder="email คนพิการ">&nbsp;
-                รหัสผ่าน : <input name="ppassword" class="form-control" type="password" required placeholder="รหัสผ่าน 8 - 15 ตัวอักษร">
-
-            </div>
-
-            <button type="submit" class="btn btn-default">เข้าสู่ระบบ</button><br>
-        </form>
-    </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-<br>
+<?php include 'header.php'; ?>
 
 <br>
 
 
 <!-- Header -->
-                <div class="intro-header" style="padding:50px">
-           <div class="container">
- 
+<div class="intro-header" style="padding:50px">
+    <div class="container">
+
         <form name="DD" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
             <br>
             <br>
 
 
-                <h1 align="left">สังคมเพื่อคนพิการ</h1>
-                <h1 align="left">ในการพัฒนาตนเอง เพื่อโอกาสในการหางาน</h1>
-                <br>
-                <h2 align="left">สมัครสมาชิก</h2>
-                <button href="p-register.php" type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px">ผู้พิการ</button>
-                <button href="c-register.php" type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px;margin-left:20px">ผู้ประกอบการ</button>
-
-                <!--
-                <a class="btn btn-primary" type="submit" role="button">ค้นหา</a>
-                -->
+            <h1 align="left">สังคมเพื่อคนพิการ</h1>
+            <h1 align="left">ในการพัฒนาตนเอง เพื่อโอกาสในการหางาน</h1>
+            <br>
+            <h2 align="left">สมัครสมาชิก</h2>
+            <button type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px">ผู้พิการ</button>
+            <button type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px;margin-left:20px">ผู้ประกอบการ</button>
 
 
-                <br>
-               </form>
-            </div>
-     
-    </div>    
+            <!--
+            <a class="btn btn-primary" type="submit" role="button">ค้นหา</a>
+            -->
+
+
+            <br>
+        </form>
+    </div>
+
+</div>
 <!-- เป้าหมาย -->
-    <section>
-        <div class="container" style="padding:100px;">
+<section>
+    <div class="container" style="padding:100px;">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">เป้าหมาย</h2>
@@ -165,8 +137,8 @@ session_start();
             </div>
         </div>
     </div>
-        </section>
-    
+</section>
+
 <!-- บริการของเรา -->
 <section id="services" style="background:#7caaff; padding-top:65px;padding-bottom:120px;  background-image: url('img/slide1.jpg');background-attachment: fixed; background-position:center;
     background-attachment: fixed;">
@@ -186,7 +158,7 @@ session_start();
                 <h4 class="service-heading">ค้นหางาน</h4>
                 <p class="text-muted">เว็บไซต์ของเรามีงานจากบริษัทกว่า200 งานรอคุณอยู่ หากคุณต้องการที่จะหางาน สามารถค้นหางานได้ที่นี</p>
             </button>
-              <button class="col-md-4 button_big">
+            <button class="col-md-4 button_big">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
@@ -194,7 +166,7 @@ session_start();
                 <h4 class="service-heading">สร้างโปรไฟล์</h4>
                 <p class="text-muted">คุณอยากได้งานที่เงินเดือนสูงใช่ไหม คุณสามารถสร้างโปรไฟล์เพื่อสมัครงานได้ที่นี</p>
             </button>
-              <button class="col-md-4 button_big">
+            <button class="col-md-4 button_big">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
@@ -204,27 +176,27 @@ session_start();
             </button>
         </div>
     </div>
-    
+
     <!-- รูปบริการต่างๆ -->
     <div class="container">
-           <div class="intro-header" style="padding:50px">
+        <div class="intro-header" style="padding:50px">
 
             <br>
             <br>
 
-                <h1 align="left">ค้นหาโอกาสได้งานดีๆ </h1>
-                <h1 align="left">จากบริษัทชั้นนำมากมาย</h1>
-                <br>
-                <button type="submit" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
-                <br>
-           </div>
+            <h1 align="left">ค้นหาโอกาสได้งานดีๆ </h1>
+            <h1 align="left">จากบริษัทชั้นนำมากมาย</h1>
+            <br>
+            <button type="submit" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
+            <br>
+        </div>
     </div>
 
-    
+
 </section>
-    <!-- ข่าวสารล่าสุด -->
-    
-    <div class="container">
+<!-- ข่าวสารล่าสุด -->
+
+<div class="container">
     <div class="row">
         <div class="col-lg-12" style="text-align:center">
             <h2 class="page-header">ข่าวสารล่าสุด</h2>
@@ -265,8 +237,8 @@ session_start();
             </div>
         </div>
     </div>
-    </div>
-    
+</div>
+
 <!-- Portfolio Grid Section -->
 <br>
 <br>
@@ -274,6 +246,103 @@ session_start();
 <br>
 <br>
 <br>
+<section  class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">ทักษะที่ต้องพัฒนา</h2>
+                <h3 class="section-subheading text-muted">ยังมีอีกหลายทักษะที่คุณต้องพัฒนาเพื่อโอกาสการทำงานที่มากขึ้น</h3>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>สกิลด้านเทคโนโลยี</h4>
+                    <p class="text-muted">ควรพัฒนาทักษะทางด้านโปรแกรม Microsoft office...</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>สกิลด้านกราฟฟิคดีไซน์</h4>
+                    <p class="text-muted">ควรพัฒนาทักษะทางด้านโปรแกรม adobe photoshop...</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>สกิลด้านภาษา</h4>
+                    <p class="text-muted">ควรพัฒนาทักษะทางด้านการเขียนภาษาอังกฤษ...</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/golden.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>สกิลด้านการสื่อสาร</h4>
+                    <p class="text-muted">การโน้มน้าวจิตใจคน การชักจูงผู้คน</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/escape.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>สกิลความเป็นผู้นำ</h4>
+                    <p class="text-muted">รู้จักบริหารจัดการลูกทีม ควบคุมงาน..</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>สกิลด้านการขับรถ</h4>
+                    <p class="text-muted">มีใบขับขี่</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <br>
 <br>
 
