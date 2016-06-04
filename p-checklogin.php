@@ -34,17 +34,15 @@ Header($ExpStr);
 <body>
     
 <?php 
-    
-        
-    
-	$pemail = $_POST["pemail"];
+
+	$email = $_POST["email"];
 	//echo $pemail;
-	$ppassword = $_POST["ppassword"];
+	$password = $_POST["password"];
 	//echo $ppassword;
-	if($pemail==""){
+	if($email==""){
 		echo "กรุณาใส่อีเมลล์";
 	}
-	else if($ppassword==""){
+	else if($password==""){
 		echo "กรุณาใส่รหัสผ่าน";
 	}
 	else{
@@ -54,37 +52,54 @@ Header($ExpStr);
 		$dbname = "senior_project";
 		$conn = mysqli_connect($servername,$name,$userpassword,$dbname);
          mysqli_set_charset($conn, "utf8");
-		$sql = "SELECT * FROM ppersonal WHERE pemail = '".$_POST["pemail"]."'";
+
+		$sql = "SELECT * FROM ppersonal,cinfo WHERE pemail = '".$_POST["email"]."' or cemail = '".$_POST["email"]."'" ;
 		$objQuery = mysqli_query($conn,$sql);
 		$objResult = mysqli_fetch_array($objQuery);
        
         
-        if($objResult["ppassword"] != $ppassword || $objResult["pemail"] != $pemail){
-		 echo "อีเมลหรือรหัสผ่าน ไม่ถูกต้อง";
+
+		 if($objResult["cpassword"] == $password || $objResult["cemail"] == $email){
+
+			$_SESSION["pname"]=$objResult["pname"];
+			$_SESSION["plastname"]=$objResult["plastname"];
+			$_SESSION["pid"]=$objResult["pid"];
+
+			//   echo $_SESSION["pname"];
+			//   echo $_SESSION["plastname"];
+
+			echo "สำเร็จ";
 			echo "
  				<html>
-   					<meta http-equiv=\"Refresh\" content=\"3; URL=p-homepage.php\">
+   					<meta http-equiv=\"Refresh\" content=\"2; URL=mainpageafterlogin-c.php\">
  				</html>
- 			"; 
+ 			";
+
+
 		}
-		else{
+	    else if($objResult["ppassword"] == $password || $objResult["pemail"] == $email){
             
             $_SESSION["pname"]=$objResult["pname"];
             $_SESSION["plastname"]=$objResult["plastname"];
             $_SESSION["pid"]=$objResult["pid"];
             
-         //   echo $_SESSION["pname"];
-         //   echo $_SESSION["plastname"];
-            
 			echo "สำเร็จ";
             echo "
  				<html>
-   					<meta http-equiv=\"Refresh\" content=\"2; URL=p-main.php\">
+   					<meta http-equiv=\"Refresh\" content=\"2; URL=mainpageafterlogin.php\">
  				</html>
  			"; 
             
 
-		}		
+		}
+		else{
+			echo "อีเมลหรือรหัสผ่าน ไม่ถูกต้อง";
+			echo "
+ 				<html>
+   					<meta http-equiv=\"Refresh\" content=\"3; URL=mainpage_pak1.php\">
+ 				</html>
+ 			";
+		}
 	}
 ?>
 
