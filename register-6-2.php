@@ -63,9 +63,10 @@ error_reporting(0);
                 
         
         
-        header("location:register-6.php");
-        
-        ?>
+        header("location:mainpageafterlogin.php");
+
+
+               ?>
         
         
         </form>

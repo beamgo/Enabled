@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="p-search.php.php">ค้นหางาน</a>
+                        <a href="p-main.php">ค้นหางาน</a>
                     </li>
                     <li> <?php    
 	   $servername = "localhost";

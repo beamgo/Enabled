@@ -219,7 +219,7 @@ session_start();
 
            <div id="service_img" style="padding:50px;background-image: url('images/findwork.jpg');background-size: 100%;background-position: center;  border-bottom-left-radius: 20px;
              border-bottom-right-radius: 20px;height:350px">
-              
+
            </div>
 
     </div>

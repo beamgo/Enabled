@@ -59,9 +59,7 @@ session_start();
 
 
 </head>
-<SCRIPT Language="JavaScript">
 
-</SCRIPT>
 <body>
 
 <!-- Navigation -->
@@ -178,64 +176,46 @@ session_start();
     <!-- รูปบริการต่างๆ -->
     <div class="container">
         <div class="intro-header2" style="padding:50px">
-
+            <form name="aa"  method="post">
             <br>
             <br>
 
             <h1 align="left">ค้นหาโอกาสได้งานดีๆ </h1>
             <h1 align="left">จากบริษัทชั้นนำมากมาย</h1>
             <br>
-            <button type="submit" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
+                <?php
+                $servername = "localhost";
+                $name = "root";
+                $userpassword = "";
+                $dbname = "senior_project";
+                $conn = mysqli_connect($servername,$name,$userpassword,$dbname);
+                mysqli_set_charset($conn, "utf8");
+                if(!isset($_SESSION["pname"])){
+                    $boolean = "false";
+                } else {
+                    $boolean = "true";
+                }
+
+                ?>
+            <button onclick="searchcheck('<?php echo $boolean ?>')" type="button" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
             <br>
+            </form>
         </div>
     </div>
+    <script type="text/javascript" language="JavaScript">
+        function searchcheck(x) {
+            if(x=='false'){
+                alert ('กรุณาเข้าสู่ระบบ');}
+            else window.location = 'p-main.php';
 
+            }
+
+
+
+    </script>
 
 </section>
-<!-- ข่าวสารล่าสุด -->
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12" style="text-align:center">
-            <h2 class="page-header">ข่าวสารล่าสุด</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-            <div class="thumbnail borderThumb"> <span><img   class="img-responsive" alt=""></span>
-                <div class="caption">
-                    <h4>ปลัด พม. เปิดงาน “รณรงค์ปีใหม่หยุดความพิการบนท้องถนน” </h4>
-                    <h6>29 กุมภาพันธ์ 2559</h6>
-                    <p> กรุงเทพฯ--29 ธ.ค.--กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์ วันนี้ (๒๘ ธ.ค.๕๘) เวลา ๑๐.๓๐ น. นายไมตรี อินทุสุต
-                        ปลัดกระทรวงการพัฒนาสังคมและความมั่นคง ของมนุษย์ (ปพม.) เป็นประธานในพิธีเปิดงาน "รณรงค์ปีใหม่หยุดความพิการบนท้องถนน"...</p>
-                    <a class="btn btn-primary" href="detail-social_1.php">อ่านต่อ<span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-            <div class="thumbnail borderThumb">  <span><img  class="img-responsive" alt=""></span>
-                <div class="caption">
-                    <h4>ประชาสัมพันธ์ข่าวอบรมอาชีพสำหรับคนพิการ</h4>
-                    <h6>24 มภราคม 2558</h6>
-                    <p>ข่าวประชาสัมพันธ์ เกี่ยวกับอาชีพ สำหรับคนพิการ รับด่วนจำนวนจำกัด (20 คนเท่านั้น) ปิดรับสมัครวันที่ 28 ธันวาคม 2558 ด้วย วิทยาลัยราชสุดา ร่วมกับโครงการ Workability จัดการอบรมอาชีพ จำนวน 4 สาขา ได้แก่ 1. งานธุรการและคอมพิวเตอร์ทั่วไป
-                        2. งานพัฒนาสินค้าผลิตภัณฑ์ชุมชน 3. งานบริหารอาหาร...</p>
-                    <a class="btn btn-primary" href="detail-social_2.php">อ่านต่อ <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-            <div class="thumbnail borderThumb">  <span><img class="img-responsive" alt=""> </span>
-                <div class="caption">
-                    <h4>‘น้องทาม’ หนูน้อยไร้แขน คนพิการต้นแบบปี 58</h4>
-                    <h6>4 ธันวาคม 2558</h6>
-                    <p>พม.ร่วมกับภาคีเครือข่ายจัดงานวันคนพิการสากล มอบโล่คนพิการต้นแบบให้ ‘น้องทาม’ หนูน้อยไร้แขนชาวพิษณุโลกที่ร่วมกิจกรรมปั่นเพื่อแม่ ส่วน ‘มาดามแป้ง-นวลพรรณ ล่ำซำ’
-                        รับรางวัลองค์กรธุรกิจสนับสนุนงานด้านคนพิการดีเด่นต่อเนื่อง... เมื่อวันที่ 3 ธ.ค.2558 ที่ห้องรอยัลจูบิลี่ บอลรูม เมืองทองธานี กรมส่งเสริม...</p>
-                    <a class="btn btn-primary" href="detail-social_3.php">อ่านต่อ <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Portfolio Grid Section -->
 <br>
@@ -255,7 +235,7 @@ session_start();
         <br>
         <div class="row">
             <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                <a href="p-skill.php" class="portfolio-link" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fa fa-plus fa-3x"></i>
@@ -341,6 +321,50 @@ session_start();
         </div>
     </div>
 </section>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" style="text-align:center">
+            <h2 class="page-header">ข่าวสารล่าสุด</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="thumbnail borderThumb"> <span><img   class="img-responsive" alt=""></span>
+                <div class="caption">
+                    <h4>ปลัด พม. เปิดงาน “รณรงค์ปีใหม่หยุดความพิการบนท้องถนน” </h4>
+                    <h6>29 กุมภาพันธ์ 2559</h6>
+                    <p> กรุงเทพฯ--29 ธ.ค.--กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์ วันนี้ (๒๘ ธ.ค.๕๘) เวลา ๑๐.๓๐ น. นายไมตรี อินทุสุต
+                        ปลัดกระทรวงการพัฒนาสังคมและความมั่นคง ของมนุษย์ (ปพม.) เป็นประธานในพิธีเปิดงาน "รณรงค์ปีใหม่หยุดความพิการบนท้องถนน"...</p>
+                    <a class="btn btn-primary" href="detail-social_1.php">อ่านต่อ<span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="thumbnail borderThumb">  <span><img  class="img-responsive" alt=""></span>
+                <div class="caption">
+                    <h4>ประชาสัมพันธ์ข่าวอบรมอาชีพสำหรับคนพิการ</h4>
+                    <h6>24 มภราคม 2558</h6>
+                    <p>ข่าวประชาสัมพันธ์ เกี่ยวกับอาชีพ สำหรับคนพิการ รับด่วนจำนวนจำกัด (20 คนเท่านั้น) ปิดรับสมัครวันที่ 28 ธันวาคม 2558 ด้วย วิทยาลัยราชสุดา ร่วมกับโครงการ Workability จัดการอบรมอาชีพ จำนวน 4 สาขา ได้แก่ 1. งานธุรการและคอมพิวเตอร์ทั่วไป
+                        2. งานพัฒนาสินค้าผลิตภัณฑ์ชุมชน 3. งานบริหารอาหาร...</p>
+                    <a class="btn btn-primary" href="detail-social_2.php">อ่านต่อ <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="thumbnail borderThumb">  <span><img class="img-responsive" alt=""> </span>
+                <div class="caption">
+                    <h4>‘น้องทาม’ หนูน้อยไร้แขน คนพิการต้นแบบปี 58</h4>
+                    <h6>4 ธันวาคม 2558</h6>
+                    <p>พม.ร่วมกับภาคีเครือข่ายจัดงานวันคนพิการสากล มอบโล่คนพิการต้นแบบให้ ‘น้องทาม’ หนูน้อยไร้แขนชาวพิษณุโลกที่ร่วมกิจกรรมปั่นเพื่อแม่ ส่วน ‘มาดามแป้ง-นวลพรรณ ล่ำซำ’
+                        รับรางวัลองค์กรธุรกิจสนับสนุนงานด้านคนพิการดีเด่นต่อเนื่อง... เมื่อวันที่ 3 ธ.ค.2558 ที่ห้องรอยัลจูบิลี่ บอลรูม เมืองทองธานี กรมส่งเสริม...</p>
+                    <a class="btn btn-primary" href="detail-social_3.php">อ่านต่อ <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <br>
 <br>
 
