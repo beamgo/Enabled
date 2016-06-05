@@ -35,6 +35,7 @@ ob_start();
     .ui-accordion-content{
         height:auto !important;
     }
+		a{color:blue !important}
   </style>
 </head>
 
@@ -439,7 +440,7 @@ ob_start();
     <div class="container">
         <div class="col-sm-12">
           <h4>ระดับปานกลาง</h4>
-          <p>เหมาะสำหรับ เด็ก ผู้พิการ และ ผู้ใหญ่</p>
+          <p></p>
         </div>
     </div>
 
@@ -587,7 +588,7 @@ ob_start();
 									</div>
 
 
-
+										
   </div>
 </div>
 
@@ -597,7 +598,7 @@ ob_start();
   <div class="container">
       <div class="col-sm-12">
         <h4>ระดับสูง</h4>
-        <p>เหมาะสำหรับ เด็ก ผู้พิการ และ ผู้ใหญ่</p>
+        <p></p>
       </div>
   </div>
 
