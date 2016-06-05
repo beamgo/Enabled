@@ -85,10 +85,6 @@ ob_start();
       }
     </script>
 
-				<script>
-				document.write(content_it_easy[0].topic);
-				</script>;
-
 <div class="container">
   <div class="col-sm-12">
     <!-- accordion1 -->
@@ -97,71 +93,342 @@ ob_start();
       <div class="container">
           <div class="col-sm-12">
             <h4>ระดับพื้นฐาน</h4>
-            <p>เหมาะสำหรับ เด็ก ผู้พิการ และ ผู้ใหญ่</p>
+            <p>ทักษะพื้นฐานในการใช้คอมพิวเตอร์ ไม่ว่าจะเป็นการพิมพ์ดีด การใช้ Microsoft Office เบื้องต้น รวมถึงการรับ-ส่งอีเมล์ ซึ่งนับว่าเป็นทักษะสำคัญที่ควรมีในการประกอบอาชีพแทบทุกอาชีพ รวมถึงการค้นคว้าหาข้อมูลต่างๆบนอินเทอร์เน็ตในชีวิตประจำวัน ่</p>
           </div>
       </div>
 
     <div class="accordion">
-  <h3>Section easyyyyyyyyyy</h3>
+
+	<!-- Skill 0 -->
+   <h3>
+		<script>
+		 document.write(content_it_easy[0].topic);
+		</script>
+  </h3>
   <div>
-    <p>
+    <p>&nbsp&nbsp&nbsp
 			<script>
-/*
-			var content = [{"body1":"abxpvlpsdlfpsdkfpkdspfkspdfkpdskpdsf","body2":"bodyyyyyyyy22222222222"}, {"body1":"body1_222222","body2":"body2_222222222"} ];
-				content[0].body1 = "aaaaaaaaaaaaaaa";
-			document.write(	content[0].body1);*/
-
-
-			var text = '{"name":[{"fullname":"full"},{"nickname":"nick"}]}';
-			var obj = JSON.parse(text);
-			document.write(obj.name[0].fullname);
-
-
+			  document.write(content_it_easy[0].body);
 			</script>
-    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-		<script> document.write(obj.name[1].nickname);</script>
     </p>
+		<p><h4>อาชีพที่เหมาะสม</h4>
+			<ul>
+			<script>
+			for(x in content_it_easy[0].job)
+			document.write("<li>"+content_it_easy[0].job[x]+"</li>");
+			</script>
+		</ul>
+		</p>
+		<p><h4>สื่อการสอนออนไลน์</h4>
+			<ul>
+			<script>
+			for(x in content_it_easy[0].course)
+			{
+			document.write("<li><a href='"+content_it_easy[0].course[x].link+"'>"+content_it_easy[0].course[x].name+"</a></li>");
+			if(!content_it_easy[0].course[x].pic == "")
+			document.write("<img src='"+content_it_easy[0].course[x].pic+"'>");
+		  }
+			</script>
+		</ul>
+		</p>
+		<p><h4>ศูนย์การศึกษา</h4>
+			<ul>
+				<script>
+				for(x in content_it_easy[0].center)
+				{
+				document.write("<li><a href='"+content_it_easy[0].center[x].link+"'>"+content_it_easy[0].center[x].name+"</a></li>");
+				if(!content_it_easy[0].center[x].pic == "")
+				document.write("<img src='"+content_it_easy[0].center[x].pic+"'>");
+			  }
+				</script>
+		</ul>
+		</p>
   </div>
-  <h3>Section 2</h3>
-  <div>
-    <p>
-    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-    suscipit faucibus urna.
-    </p>
-  </div>
-  <h3>Section 3</h3>
-  <div>
-    <p>
-    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-    </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-  <h3>Section 4</h3>
-  <div>
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-    </p>
-    <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-    </p>
-  </div>
+
+
+		<!-- Skill 1 -->
+	   <h3>
+			<script>
+			 document.write(content_it_easy[1].topic);
+			</script>
+	  </h3>
+	  <div>
+	    <p>&nbsp&nbsp&nbsp
+				<script>
+				  document.write(content_it_easy[1].body);
+				</script>
+	    </p>
+			<p><h4>อาชีพที่เหมาะสม</h4>
+				<ul>
+				<script>
+				for(x in content_it_easy[1].job)
+				document.write("<li>"+content_it_easy[1].job[x]+"</li>");
+				</script>
+			</ul>
+			</p>
+			<p><h4>สื่อการสอนออนไลน์</h4>
+				<ul>
+				<script>
+				for(x in content_it_easy[1].course)
+				{
+				document.write("<li><a href='"+content_it_easy[1].course[x].link+"'>"+content_it_easy[1].course[x].name+"</a></li>");
+				if(!content_it_easy[1].course[x].pic == "")
+				document.write("<img src='"+content_it_easy[1].course[x].pic+"'>");
+			  }
+				</script>
+			</ul>
+			</p>
+			<p><h4>ศูนย์การศึกษา</h4>
+				<ul>
+					<script>
+					for(x in content_it_easy[1].center)
+					{
+					document.write("<li><a href='"+content_it_easy[1].center[x].link+"'>"+content_it_easy[1].center[x].name+"</a></li>");
+					if(!content_it_easy[1].center[x].pic == "")
+					document.write("<img src='"+content_it_easy[1].center[x].pic+"'>");
+				  }
+					</script>
+			</ul>
+			</p>
+	  </div>
+
+
+			<!-- Skill 2 -->
+		   <h3>
+				<script>
+				 document.write(content_it_easy[2].topic);
+				</script>
+		  </h3>
+		  <div>
+		    <p>&nbsp&nbsp&nbsp
+					<script>
+					  document.write(content_it_easy[2].body);
+					</script>
+		    </p>
+				<p><h4>อาชีพที่เหมาะสม</h4>
+					<ul>
+					<script>
+					for(x in content_it_easy[2].job)
+					document.write("<li>"+content_it_easy[2].job[x]+"</li>");
+					</script>
+				</ul>
+				</p>
+				<p><h4>สื่อการสอนออนไลน์</h4>
+					<ul>
+					<script>
+					for(x in content_it_easy[2].course)
+					{
+					document.write("<li><a href='"+content_it_easy[2].course[x].link+"'>"+content_it_easy[2].course[x].name+"</a></li>");
+					if(!content_it_easy[2].course[x].pic == "")
+					document.write("<img src='"+content_it_easy[2].course[x].pic+"'>");
+				  }
+					</script>
+				</ul>
+				</p>
+				<p><h4>ศูนย์การศึกษา</h4>
+					<ul>
+						<script>
+						for(x in content_it_easy[2].center)
+						{
+						document.write("<li><a href='"+content_it_easy[2].center[x].link+"'>"+content_it_easy[2].center[x].name+"</a></li>");
+						if(!content_it_easy[2].center[x].pic == "")
+						document.write("<img src='"+content_it_easy[2].center[x].pic+"'>");
+					  }
+						</script>
+				</ul>
+				</p>
+		  </div>
+
+
+				<!-- Skill 3 -->
+			   <h3>
+					<script>
+					 document.write(content_it_easy[3].topic);
+					</script>
+			  </h3>
+			  <div>
+			    <p>&nbsp&nbsp&nbsp
+						<script>
+						  document.write(content_it_easy[3].body);
+						</script>
+			    </p>
+					<p><h4>อาชีพที่เหมาะสม</h4>
+						<ul>
+						<script>
+						for(x in content_it_easy[3].job)
+						document.write("<li>"+content_it_easy[3].job[x]+"</li>");
+						</script>
+					</ul>
+					</p>
+					<p><h4>สื่อการสอนออนไลน์</h4>
+						<ul>
+						<script>
+						for(x in content_it_easy[3].course)
+						{
+						document.write("<li><a href='"+content_it_easy[3].course[x].link+"'>"+content_it_easy[3].course[x].name+"</a></li>");
+						if(!content_it_easy[3].course[x].pic == "")
+						document.write("<img src='"+content_it_easy[3].course[x].pic+"'>");
+					  }
+						</script>
+					</ul>
+					</p>
+					<p><h4>ศูนย์การศึกษา</h4>
+						<ul>
+							<script>
+							for(x in content_it_easy[3].center)
+							{
+							document.write("<li><a href='"+content_it_easy[3].center[x].link+"'>"+content_it_easy[3].center[x].name+"</a></li>");
+							if(!content_it_easy[3].center[x].pic == "")
+							document.write("<img src='"+content_it_easy[3].center[x].pic+"'>");
+						  }
+							</script>
+					</ul>
+					</p>
+			  </div>
+
+
+					<!-- Skill 4 -->
+				   <h3>
+						<script>
+						 document.write(content_it_easy[4].topic);
+						</script>
+				  </h3>
+				  <div>
+				    <p>&nbsp&nbsp&nbsp
+							<script>
+							  document.write(content_it_easy[4].body);
+							</script>
+				    </p>
+						<p><h4>อาชีพที่เหมาะสม</h4>
+							<ul>
+							<script>
+							for(x in content_it_easy[4].job)
+							document.write("<li>"+content_it_easy[4].job[x]+"</li>");
+							</script>
+						</ul>
+						</p>
+						<p><h4>สื่อการสอนออนไลน์</h4>
+							<ul>
+							<script>
+							for(x in content_it_easy[4].course)
+							{
+							document.write("<li><a href='"+content_it_easy[4].course[x].link+"'>"+content_it_easy[4].course[x].name+"</a></li>");
+							if(!content_it_easy[4].course[x].pic == "")
+							document.write("<img src='"+content_it_easy[4].course[x].pic+"'>");
+						  }
+							</script>
+						</ul>
+						</p>
+						<p><h4>ศูนย์การศึกษา</h4>
+							<ul>
+								<script>
+								for(x in content_it_easy[4].center)
+								{
+								document.write("<li><a href='"+content_it_easy[4].center[x].link+"'>"+content_it_easy[4].center[x].name+"</a></li>");
+								if(!content_it_easy[4].center[x].pic == "")
+								document.write("<img src='"+content_it_easy[4].center[x].pic+"'>");
+							  }
+								</script>
+						</ul>
+						</p>
+				  </div>
+
+
+						<!-- Skill 5 -->
+					   <h3>
+							<script>
+							 document.write(content_it_easy[5].topic);
+							</script>
+					  </h3>
+					  <div>
+					    <p>&nbsp&nbsp&nbsp
+								<script>
+								  document.write(content_it_easy[5].body);
+								</script>
+					    </p>
+							<p><h4>อาชีพที่เหมาะสม</h4>
+								<ul>
+								<script>
+								for(x in content_it_easy[5].job)
+								document.write("<li>"+content_it_easy[5].job[x]+"</li>");
+								</script>
+							</ul>
+							</p>
+							<p><h4>สื่อการสอนออนไลน์</h4>
+								<ul>
+								<script>
+								for(x in content_it_easy[5].course)
+								{
+								document.write("<li><a href='"+content_it_easy[5].course[x].link+"'>"+content_it_easy[5].course[x].name+"</a></li>");
+								if(!content_it_easy[5].course[x].pic == "")
+								document.write("<img src='"+content_it_easy[5].course[x].pic+"'>");
+							  }
+								</script>
+							</ul>
+							</p>
+							<p><h4>ศูนย์การศึกษา</h4>
+								<ul>
+									<script>
+									for(x in content_it_easy[5].center)
+									{
+									document.write("<li><a href='"+content_it_easy[5].center[x].link+"'>"+content_it_easy[5].center[x].name+"</a></li>");
+									if(!content_it_easy[5].center[x].pic == "")
+									document.write("<img src='"+content_it_easy[5].center[x].pic+"'>");
+								  }
+									</script>
+							</ul>
+							</p>
+					  </div>
+
+
+							<!-- Skill 6 -->
+						   <h3>
+								<script>
+								 document.write(content_it_easy[6].topic);
+								</script>
+						  </h3>
+						  <div>
+						    <p>&nbsp&nbsp&nbsp
+									<script>
+									  document.write(content_it_easy[6].body);
+									</script>
+						    </p>
+								<p><h4>อาชีพที่เหมาะสม</h4>
+									<ul>
+									<script>
+									for(x in content_it_easy[6].job)
+									document.write("<li>"+content_it_easy[6].job[x]+"</li>");
+									</script>
+								</ul>
+								</p>
+								<p><h4>สื่อการสอนออนไลน์</h4>
+									<ul>
+									<script>
+									for(x in content_it_easy[6].course)
+									{
+									document.write("<li><a href='"+content_it_easy[6].course[x].link+"'>"+content_it_easy[6].course[x].name+"</a></li>");
+									if(!content_it_easy[6].course[x].pic == "")
+									document.write("<img src='"+content_it_easy[6].course[x].pic+"'>");
+								  }
+									</script>
+								</ul>
+								</p>
+								<p><h4>ศูนย์การศึกษา</h4>
+									<ul>
+										<script>
+										for(x in content_it_easy[6].center)
+										{
+										document.write("<li><a href='"+content_it_easy[6].center[x].link+"'>"+content_it_easy[6].center[x].name+"</a></li>");
+										if(!content_it_easy[6].center[x].pic == "")
+										document.write("<img src='"+content_it_easy[6].center[x].pic+"'>");
+									  }
+										</script>
+								</ul>
+								</p>
+						  </div>
+
+
+
   </div>
 </div>
 
