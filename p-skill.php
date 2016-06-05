@@ -6,13 +6,14 @@ ob_start();
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/signin.css" rel="stylesheet">
+  <link href="css/signin.css" rel="stylesheet">
 	<meta charset="UTF-8">
 
   <!-- Accrodion -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="p-skill-content.js"></script>
 
 
 <title>skill enhancement</title>
@@ -44,43 +45,11 @@ ob_start();
 		$dbname = "senior_project";
 		$conn = mysqli_connect($servername,$name,$userpassword,$dbname);
         mysqli_set_charset($conn, "utf8");
-
-if(isset($_SESSION["pid"]))
-{
-        echo $_SESSION["pid"];
-      echo $_SESSION["pname"]; ?> &nbsp;&nbsp; <?php
-    echo $_SESSION["plastname"];
-  }
 ?>
 
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
-    <div class="container">
-            <a class="navbar-brand page-scroll" rel="home" href="#" title="Buy Sell Rent Everyting">
-                <img style="max-width:100px; margin-top: -9px;" src="img/logo-small.png">
-            </a>
-        <form class="navbar-form navbar-right" action="p-checklogin.php" method="post">
-            <!--?// php echo $_SESSION["pid"]; ?-->
-            <div class="form-group">
-                อีเมลล์ : <input name="pemail" type="text" class="form-control" placeholder="email คนพิการ">&nbsp;
-                รหัสผ่าน : <input name="ppassword" class="form-control" type="password" required="" placeholder="รหัสผ่าน 8 - 15 ตัวอักษร">
-
-            </div>
-
-            <button type="submit" class="btn btn-default">เข้าสู่ระบบ</button><br>
-        </form>
-    </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-
-    <!-- /.container -->
-</nav>
+      <?php include 'p-navigation.php' ; ?>
 
 <div class="container">
 
@@ -90,7 +59,7 @@ if(isset($_SESSION["pid"]))
     <div class="col-sm-12">
 
       <button class="col-sm-3 round_top" onClick="changeTab(1)" id="tab1">
-        ระดับง่าย
+        ระดับพื้นฐาน
       </button>
       <button class="col-sm-3 round_top" onClick="changeTab(2)" id="tab2">
         ระดับปานกลาง
@@ -116,7 +85,9 @@ if(isset($_SESSION["pid"]))
       }
     </script>
 
-
+				<script>
+				document.write(content_it_easy[0].topic);
+				</script>;
 
 <div class="container">
   <div class="col-sm-12">
@@ -125,7 +96,7 @@ if(isset($_SESSION["pid"]))
 
       <div class="container">
           <div class="col-sm-12">
-            <h4>ระดับง่าย</h4>
+            <h4>ระดับพื้นฐาน</h4>
             <p>เหมาะสำหรับ เด็ก ผู้พิการ และ ผู้ใหญ่</p>
           </div>
       </div>
@@ -134,10 +105,24 @@ if(isset($_SESSION["pid"]))
   <h3>Section easyyyyyyyyyy</h3>
   <div>
     <p>
+			<script>
+/*
+			var content = [{"body1":"abxpvlpsdlfpsdkfpkdspfkspdfkpdskpdsf","body2":"bodyyyyyyyy22222222222"}, {"body1":"body1_222222","body2":"body2_222222222"} ];
+				content[0].body1 = "aaaaaaaaaaaaaaa";
+			document.write(	content[0].body1);*/
+
+
+			var text = '{"name":[{"fullname":"full"},{"nickname":"nick"}]}';
+			var obj = JSON.parse(text);
+			document.write(obj.name[0].fullname);
+
+
+			</script>
     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
     ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
     amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
     odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+		<script> document.write(obj.name[1].nickname);</script>
     </p>
   </div>
   <h3>Section 2</h3>
@@ -305,4 +290,8 @@ if(isset($_SESSION["pid"]))
 </div>
 </div>
 </body>
+<script>
+document.getElementById("accordion1").style.display = "inline";
+document.getElementById("tab1").style.backgroundColor = "lightblue";
+</script>
 </html>

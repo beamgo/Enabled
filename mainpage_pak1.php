@@ -10,7 +10,7 @@ session_start();
         p.margin {
             margin: 4cm 4cm 3cm 4cm
         }
-        
+
     </style>
 
 
@@ -40,9 +40,8 @@ session_start();
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
       <style>
-       
         .button_big{
             background-color:#E0E0E0;border:0px;
             border-top-left-radius: 20px;
@@ -58,18 +57,10 @@ session_start();
     </style>
 
 
-    <script type="text/javascript" language="JavaScript">
-        function people() {
-            window.location = 'p-register.php'
-        }
-        function company() {
-            window.location = 'c-register.php'
-        }
-
-    </script>
-
 </head>
+<SCRIPT Language="JavaScript">
 
+</SCRIPT>
 <body>
 
 <!-- Navigation -->
@@ -83,15 +74,20 @@ session_start();
         <form class="navbar-form navbar-right" action="p-checklogin.php" method="post">
             <?// php echo $_SESSION["pid"]; ?>
             <div class="form-group">
-                อีเมลล์ : <input name="email" type="text" class="form-control" placeholder="email">&nbsp;
-                รหัสผ่าน : <input name="password" class="form-control" type="password" required placeholder="รหัสผ่าน 8 - 15 ตัวอักษร">
+                อีเมลล์ : <input name="pemail" type="text" class="form-control" placeholder="email คนพิการ">&nbsp;
+                รหัสผ่าน : <input name="ppassword" class="form-control" type="password" required placeholder="รหัสผ่าน 8 - 15 ตัวอักษร">
 
             </div>
 
             <button type="submit" class="btn btn-default">เข้าสู่ระบบ</button><br>
         </form>
     </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
 
+
+            </ul>
+        </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
@@ -101,11 +97,12 @@ session_start();
 
 <br>
 
+
 <!-- Header -->
                 <div class="intro-header" style="padding:50px">
            <div class="container">
- 
-        <form name="DD" action=""  method="post">
+
+        <form name="DD" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
             <br>
             <br>
@@ -115,8 +112,8 @@ session_start();
                 <h1 align="left">ในการพัฒนาตนเอง เพื่อโอกาสในการหางาน</h1>
                 <br>
                 <h2 align="left">สมัครสมาชิก</h2>
-                <button type="button" onclick="people()"   class="btn btn-warning btn-lg pull-left" style="width:150px">ผู้พิการ</button>
-                <button type="button" onclick="company()"  class="btn btn-warning btn-lg pull-left" style="width:150px;margin-left:20px">ผู้ประกอบการ</button>
+                <button href="p-register.php" type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px">ผู้พิการ</button>
+                <button href="c-register.php" type="submit" class="btn btn-warning btn-lg pull-left" style="width:150px;margin-left:20px">ผู้ประกอบการ</button>
 
                 <!--
                 <a class="btn btn-primary" type="submit" role="button">ค้นหา</a>
@@ -126,8 +123,8 @@ session_start();
                 <br>
                </form>
             </div>
-     
-    </div>    
+
+    </div>
 <!-- เป้าหมาย -->
     <section>
         <div class="container" style="padding:100px;">
@@ -168,7 +165,7 @@ session_start();
         </div>
     </div>
         </section>
-    
+
 <!-- บริการของเรา -->
 <section id="services" style="background:#7caaff; padding-top:65px;padding-bottom:120px;  background-image: url('img/slide1.jpg');background-attachment: fixed; background-position:center;
     background-attachment: fixed;">
@@ -180,7 +177,7 @@ session_start();
         </div>
         <br>
         <div class="row text-center col-sm-12"  style="margin:0px;padding:0;">
-            <button class="col-md-4 button_big" style="background-color:#f3f3f3;">
+            <button class="col-md-4 button_big" style="background-color:white;" onmouseover="changeService(this)" value="findwork.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-search fa-stack-1x fa-inverse"></i>
@@ -188,7 +185,7 @@ session_start();
                 <h4 class="service-heading">ค้นหางาน</h4>
                 <p class="text-muted">เว็บไซต์ของเรามีงานจากบริษัทกว่า200 งานรอคุณอยู่ หากคุณต้องการที่จะหางาน สามารถค้นหางานได้ที่นี</p>
             </button>
-              <button class="col-md-4 button_big">
+              <button class="col-md-4 button_big" onmouseover="changeService(this)" value="createprofile.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
@@ -196,7 +193,7 @@ session_start();
                 <h4 class="service-heading">สร้างโปรไฟล์</h4>
                 <p class="text-muted">คุณอยากได้งานที่เงินเดือนสูงใช่ไหม คุณสามารถสร้างโปรไฟล์เพื่อสมัครงานได้ที่นี</p>
             </button>
-              <button class="col-md-4 button_big">
+              <button class="col-md-4 button_big" onmouseover="changeService(this)" value="hirepeople.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
@@ -206,26 +203,31 @@ session_start();
             </button>
         </div>
     </div>
-    
+    <script>
+      function changeService(obj){
+        var x = document.getElementsByClassName("button_big");
+        x[0].style.backgroundColor = "#E0E0E0";
+        x[1].style.backgroundColor = "#E0E0E0";
+        x[2].style.backgroundColor = "#E0E0E0";
+        obj.style.backgroundColor = "white";
+          document.getElementById("service_img").style.backgroundImage = 'url("images/'+obj.value+'")';
+      }
+    </script>
+
     <!-- รูปบริการต่างๆ -->
     <div class="container">
-           <div class="intro-header" style="padding:50px">
 
-            <br>
-            <br>
-
-                <h1 align="left">ค้นหาโอกาสได้งานดีๆ </h1>
-                <h1 align="left">จากบริษัทชั้นนำมากมาย</h1>
-                <br>
-                <button type="submit" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
-                <br>
+           <div id="service_img" style="padding:50px;background-image: url('images/findwork.jpg');background-size: 100%;background-position: center;  border-bottom-left-radius: 20px;
+             border-bottom-right-radius: 20px;height:350px">
+              
            </div>
+
     </div>
 
-    
+
 </section>
     <!-- ข่าวสารล่าสุด -->
-    
+
     <div class="container">
     <div class="row">
         <div class="col-lg-12" style="text-align:center">
@@ -268,7 +270,7 @@ session_start();
         </div>
     </div>
     </div>
-    
+
 <!-- Portfolio Grid Section -->
 <br>
 <br>
