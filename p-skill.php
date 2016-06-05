@@ -444,52 +444,150 @@ ob_start();
     </div>
 
   <div class="accordion">
-  <h3>Section Mediummmmmmmmmmmmmmmmm</h3>
-  <div>
-  <p>
-  Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-  ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-  amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-  odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-  </p>
-  </div>
-  <h3>Section 2</h3>
-  <div>
-  <p>
-  Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-  purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-  velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-  suscipit faucibus urna.
-  </p>
-  </div>
-  <h3>Section 3</h3>
-  <div>
-  <p>
-  Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-  Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-  ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-  lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-  </p>
-  <ul>
-    <li>List item one</li>
-    <li>List item two</li>
-    <li>List item three</li>
-  </ul>
-  </div>
-  <h3>Section 4</h3>
-  <div>
-  <p>
-  Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-  et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-  faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-  mauris vel est.
-  </p>
-  <p>
-  Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-  inceptos himenaeos.
-  </p>
-  </div>
+
+
+									<!-- Med Skill 0 -->
+								   <h3>
+										<script>
+										 document.write(content_it_medium[0].topic);
+										</script>
+								  </h3>
+								  <div>
+								    <p>&nbsp&nbsp&nbsp
+											<script>
+											  document.write(content_it_medium[0].body);
+											</script>
+								    </p>
+										<p><h4>อาชีพที่เหมาะสม</h4>
+											<ul>
+											<script>
+											for(x in content_it_medium[0].job)
+											document.write("<li>"+content_it_medium[0].job[x]+"</li>");
+											</script>
+										</ul>
+										</p>
+										<p><h4>สื่อการสอนออนไลน์</h4>
+											<ul>
+											<script>
+											for(x in content_it_medium[0].course)
+											{
+											document.write("<li><a href='"+content_it_medium[0].course[x].link+"'>"+content_it_medium[0].course[x].name+"</a></li>");
+											if(!content_it_medium[0].course[x].pic == "")
+											document.write("<img src='"+content_it_medium[0].course[x].pic+"'>");
+										  }
+											</script>
+										</ul>
+										</p>
+										<p><h4>ศูนย์การศึกษา</h4>
+											<ul>
+												<script>
+												for(x in content_it_medium[0].center)
+												{
+												document.write("<li><a href='"+content_it_medium[0].center[x].link+"'>"+content_it_medium[0].center[x].name+"</a></li>");
+												if(!content_it_medium[0].center[x].pic == "")
+												document.write("<img src='"+content_it_medium[0].center[x].pic+"'>");
+											  }
+												</script>
+										</ul>
+										</p>
+								  </div>
+
+
+									<!-- Med Skill 1 -->
+									 <h3>
+										<script>
+										 document.write(content_it_medium[1].topic);
+										</script>
+									</h3>
+									<div>
+										<p>&nbsp&nbsp&nbsp
+											<script>
+												document.write(content_it_medium[1].body);
+											</script>
+										</p>
+										<p><h4>อาชีพที่เหมาะสม</h4>
+											<ul>
+											<script>
+											for(x in content_it_medium[1].job)
+											document.write("<li>"+content_it_medium[1].job[x]+"</li>");
+											</script>
+										</ul>
+										</p>
+										<p><h4>สื่อการสอนออนไลน์</h4>
+											<ul>
+											<script>
+											for(x in content_it_medium[1].course)
+											{
+											document.write("<li><a href='"+content_it_medium[1].course[x].link+"'>"+content_it_medium[1].course[x].name+"</a></li>");
+											if(!content_it_medium[1].course[x].pic == "")
+											document.write("<img src='"+content_it_medium[1].course[x].pic+"'>");
+											}
+											</script>
+										</ul>
+										</p>
+										<p><h4>ศูนย์การศึกษา</h4>
+											<ul>
+												<script>
+												for(x in content_it_medium[1].center)
+												{
+												document.write("<li><a href='"+content_it_medium[1].center[x].link+"'>"+content_it_medium[1].center[x].name+"</a></li>");
+												if(!content_it_medium[1].center[x].pic == "")
+												document.write("<img src='"+content_it_medium[1].center[x].pic+"'>");
+												}
+												</script>
+										</ul>
+										</p>
+									</div>
+
+
+									<!-- Med Skill 2 -->
+									 <h3>
+										<script>
+										 document.write(content_it_medium[2].topic);
+										</script>
+									</h3>
+									<div>
+										<p>&nbsp&nbsp&nbsp
+											<script>
+												document.write(content_it_medium[2].body);
+											</script>
+										</p>
+										<p><h4>อาชีพที่เหมาะสม</h4>
+											<ul>
+											<script>
+											for(x in content_it_medium[2].job)
+											document.write("<li>"+content_it_medium[2].job[x]+"</li>");
+											</script>
+										</ul>
+										</p>
+										<p><h4>สื่อการสอนออนไลน์</h4>
+											<ul>
+											<script>
+											for(x in content_it_medium[2].course)
+											{
+											document.write("<li><a href='"+content_it_medium[2].course[x].link+"'>"+content_it_medium[2].course[x].name+"</a></li>");
+											if(!content_it_medium[2].course[x].pic == "")
+											document.write("<img src='"+content_it_medium[2].course[x].pic+"'>");
+											}
+											</script>
+										</ul>
+										</p>
+										<p><h4>ศูนย์การศึกษา</h4>
+											<ul>
+												<script>
+												for(x in content_it_medium[2].center)
+												{
+												document.write("<li><a href='"+content_it_medium[2].center[x].link+"'>"+content_it_medium[2].center[x].name+"</a></li>");
+												if(!content_it_medium[2].center[x].pic == "")
+												document.write("<img src='"+content_it_medium[6].center[x].pic+"'>");
+												}
+												</script>
+										</ul>
+										</p>
+									</div>
+
+
+
   </div>
 </div>
 
@@ -504,51 +602,151 @@ ob_start();
   </div>
 
 <div class="accordion">
-<h3>Section Harddddddddddddddddd</h3>
-<div>
-  <p>
-  Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-  ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-  amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-  odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-  </p>
-</div>
-<h3>Section 2</h3>
-<div>
-  <p>
-  Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-  purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-  velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-  suscipit faucibus urna.
-  </p>
-</div>
-<h3>Section 3</h3>
-<div>
-  <p>
-  Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-  Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-  ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-  lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-  </p>
-  <ul>
-    <li>List item one</li>
-    <li>List item two</li>
-    <li>List item three</li>
-  </ul>
-</div>
-<h3>Section 4</h3>
-<div>
-  <p>
-  Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-  et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-  faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-  mauris vel est.
-  </p>
-  <p>
-  Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-  inceptos himenaeos.
-  </p>
+
+
+										<!-- Hard Skill 0 -->
+									   <h3>
+											<script>
+											 document.write(content_it_hard[0].topic);
+											</script>
+									  </h3>
+									  <div>
+									    <p>&nbsp&nbsp&nbsp
+												<script>
+												  document.write(content_it_hard[0].body);
+												</script>
+									    </p>
+											<p><h4>อาชีพที่เหมาะสม</h4>
+												<ul>
+												<script>
+												for(x in content_it_hard[0].job)
+												document.write("<li>"+content_it_hard[0].job[x]+"</li>");
+												</script>
+											</ul>
+											</p>
+											<p><h4>สื่อการสอนออนไลน์</h4>
+												<ul>
+												<script>
+												for(x in content_it_hard[0].course)
+												{
+												document.write("<li><a href='"+content_it_hard[0].course[x].link+"'>"+content_it_hard[0].course[x].name+"</a></li>");
+												if(!content_it_hard[0].course[x].pic == "")
+												document.write("<img src='"+content_it_hard[0].course[x].pic+"'>");
+											  }
+												</script>
+											</ul>
+											</p>
+											<p><h4>ศูนย์การศึกษา</h4>
+												<ul>
+													<script>
+													for(x in content_it_hard[0].center)
+													{
+													document.write("<li><a href='"+content_it_hard[0].center[x].link+"'>"+content_it_hard[0].center[x].name+"</a></li>");
+													if(!content_it_hard[0].center[x].pic == "")
+													document.write("<img src='"+content_it_hard[0].center[x].pic+"'>");
+												  }
+													</script>
+											</ul>
+											</p>
+									  </div>
+
+
+										<!-- Hard Skill 1 -->
+										 <h3>
+											<script>
+											 document.write(content_it_hard[1].topic);
+											</script>
+										</h3>
+										<div>
+											<p>&nbsp&nbsp&nbsp
+												<script>
+													document.write(content_it_hard[1].body);
+												</script>
+											</p>
+											<p><h4>อาชีพที่เหมาะสม</h4>
+												<ul>
+												<script>
+												for(x in content_it_hard[1].job)
+												document.write("<li>"+content_it_hard[1].job[x]+"</li>");
+												</script>
+											</ul>
+											</p>
+											<p><h4>สื่อการสอนออนไลน์</h4>
+												<ul>
+												<script>
+												for(x in content_it_hard[1].course)
+												{
+												document.write("<li><a href='"+content_it_hard[1].course[x].link+"'>"+content_it_hard[1].course[x].name+"</a></li>");
+												if(!content_it_hard[1].course[x].pic == "")
+												document.write("<img src='"+content_it_hard[1].course[x].pic+"'>");
+												}
+												</script>
+											</ul>
+											</p>
+											<p><h4>ศูนย์การศึกษา</h4>
+												<ul>
+													<script>
+													for(x in content_it_hard[1].center)
+													{
+													document.write("<li><a href='"+content_it_hard[1].center[x].link+"'>"+content_it_hard[1].center[x].name+"</a></li>");
+													if(!content_it_hard[1].center[x].pic == "")
+													document.write("<img src='"+content_it_hard[1].center[x].pic+"'>");
+													}
+													</script>
+											</ul>
+											</p>
+										</div>
+
+
+										<!-- Hard Skill 2 -->
+										 <h3>
+											<script>
+											 document.write(content_it_hard[2].topic);
+											</script>
+										</h3>
+										<div>
+											<p>&nbsp&nbsp&nbsp
+												<script>
+													document.write(content_it_hard[2].body);
+												</script>
+											</p>
+											<p><h4>อาชีพที่เหมาะสม</h4>
+												<ul>
+												<script>
+												for(x in content_it_hard[2].job)
+												document.write("<li>"+content_it_hard[2].job[x]+"</li>");
+												</script>
+											</ul>
+											</p>
+											<p><h4>สื่อการสอนออนไลน์</h4>
+												<ul>
+												<script>
+												for(x in content_it_hard[2].course)
+												{
+												document.write("<li><a href='"+content_it_hard[2].course[x].link+"'>"+content_it_hard[2].course[x].name+"</a></li>");
+												if(!content_it_hard[2].course[x].pic == "")
+												document.write("<img src='"+content_it_hard[2].course[x].pic+"'>");
+												}
+												</script>
+											</ul>
+											</p>
+											<p><h4>ศูนย์การศึกษา</h4>
+												<ul>
+													<script>
+													for(x in content_it_hard[2].center)
+													{
+													document.write("<li><a href='"+content_it_hard[2].center[x].link+"'>"+content_it_hard[2].center[x].name+"</a></li>");
+													if(!content_it_hard[2].center[x].pic == "")
+													document.write("<img src='"+content_it_hard[6].center[x].pic+"'>");
+													}
+													</script>
+											</ul>
+											</p>
+										</div>
+
+
+
+
 </div>
 </div>
 
