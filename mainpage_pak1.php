@@ -74,8 +74,8 @@ session_start();
         <form class="navbar-form navbar-right" action="p-checklogin.php" method="post">
             <?// php echo $_SESSION["pid"]; ?>
             <div class="form-group">
-                อีเมลล์ : <input name="pemail" type="text" class="form-control" placeholder="email คนพิการ">&nbsp;
-                รหัสผ่าน : <input name="ppassword" class="form-control" type="password" required placeholder="รหัสผ่าน 8 - 15 ตัวอักษร">
+                อีเมลล์ : <input name="email" type="text" class="form-control" placeholder="email ">&nbsp;
+                รหัสผ่าน : <input name="password" class="form-control" type="password" required placeholder="รหัสผ่าน 8 - 15 ตัวอักษร">
 
             </div>
 
@@ -177,7 +177,7 @@ session_start();
         </div>
         <br>
         <div class="row text-center col-sm-12"  style="margin:0px;padding:0;">
-            <button class="col-md-4 button_big" style="background-color:white;" onmouseover="changeService(this)" value="findwork.jpg">
+            <button onclick="click1()" class="col-md-4 button_big" style="background-color:white;" onmouseover="changeService(this)" value="findwork.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-search fa-stack-1x fa-inverse"></i>
@@ -185,7 +185,7 @@ session_start();
                 <h4 class="service-heading">ค้นหางาน</h4>
                 <p class="text-muted">เว็บไซต์ของเรามีงานจากบริษัทกว่า200 งานรอคุณอยู่ หากคุณต้องการที่จะหางาน สามารถค้นหางานได้ที่นี</p>
             </button>
-              <button class="col-md-4 button_big" onmouseover="changeService(this)" value="createprofile.jpg">
+              <button onclick="click1()" class="col-md-4 button_big" onmouseover="changeService(this)" value="createprofile.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
@@ -193,7 +193,7 @@ session_start();
                 <h4 class="service-heading">สร้างโปรไฟล์</h4>
                 <p class="text-muted">คุณอยากได้งานที่เงินเดือนสูงใช่ไหม คุณสามารถสร้างโปรไฟล์เพื่อสมัครงานได้ที่นี</p>
             </button>
-              <button class="col-md-4 button_big" onmouseover="changeService(this)" value="hirepeople.jpg">
+              <button onclick="click1()" class="col-md-4 button_big" onmouseover="changeService(this)" value="hirepeople.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
@@ -212,6 +212,10 @@ session_start();
         obj.style.backgroundColor = "white";
           document.getElementById("service_img").style.backgroundImage = 'url("images/'+obj.value+'")';
       }
+      function click() {
+          alert ('กรุณาเข้าสู่ระบบ');
+      }
+
     </script>
 
     <!-- รูปบริการต่างๆ -->

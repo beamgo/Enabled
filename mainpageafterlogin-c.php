@@ -134,6 +134,20 @@ session_start();
 </section>
 
 <!-- บริการของเรา -->
+<?php
+$servername = "localhost";
+$name = "root";
+$userpassword = "";
+$dbname = "senior_project";
+$conn = mysqli_connect($servername,$name,$userpassword,$dbname);
+mysqli_set_charset($conn, "utf8");
+if(!isset($_SESSION["cemail"])){
+    $boolean = "false";
+} else {
+    $boolean = "true";
+}
+
+?>
 <section id="services" style="background:#7caaff; padding-top:65px;padding-bottom:120px;  background-image: url('img/slide1.jpg');background-attachment: fixed; background-position:center;
     background-attachment: fixed;">
     <div class="container">/
@@ -144,7 +158,7 @@ session_start();
         </div>
         <br>
         <div class="row text-center col-sm-12"  style="margin:0px;padding:0;">
-            <button class="col-md-4 button_big" style="background-color:#f3f3f3;">
+            <button onclick="searchclick()" class="col-md-4 button_big" style="background-color:white;" onmouseover="changeService(this)" value="findwork.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-search fa-stack-1x fa-inverse"></i>
@@ -152,7 +166,7 @@ session_start();
                 <h4 class="service-heading">ค้นหางาน</h4>
                 <p class="text-muted">เว็บไซต์ของเรามีงานจากบริษัทกว่า200 งานรอคุณอยู่ หากคุณต้องการที่จะหางาน สามารถค้นหางานได้ที่นี</p>
             </button>
-            <button class="col-md-4 button_big">
+            <button onclick="editclick('<?php echo $boolean ?>')" class="col-md-4 button_big" onmouseover="changeService(this)" value="createprofile.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
@@ -160,7 +174,7 @@ session_start();
                 <h4 class="service-heading">สร้างโปรไฟล์</h4>
                 <p class="text-muted">คุณอยากได้งานที่เงินเดือนสูงใช่ไหม คุณสามารถสร้างโปรไฟล์เพื่อสมัครงานได้ที่นี</p>
             </button>
-            <button class="col-md-4 button_big">
+            <button onclick="postclick('<?php echo $boolean ?>')" class="col-md-4 button_big" onmouseover="changeService(this)" value="hirepeople.jpg">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
@@ -170,34 +184,48 @@ session_start();
             </button>
         </div>
     </div>
+    <script>
+        function changeService(obj){
+            var x = document.getElementsByClassName("button_big");
+            x[0].style.backgroundColor = "#E0E0E0";
+            x[1].style.backgroundColor = "#E0E0E0";
+            x[2].style.backgroundColor = "#E0E0E0";
+            obj.style.backgroundColor = "white";
+            document.getElementById("service_img").style.backgroundImage = 'url("images/'+obj.value+'")';
+        }
 
-    <!-- รูปบริการต่างๆ -->
-    <div class="container">
-        <div class="intro-header2" style="padding:50px">
-            <form name="DD" action=""  method="post">
-            <br>
-            <br>
+        function searchclick() {
 
-            <h1 align="left">ค้นหาโอกาสได้งานดีๆ </h1>
-            <h1 align="left">จากบริษัทชั้นนำมากมาย</h1>
-            <br>
-            <button onclick="searchcheck2()" type="button" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
-            <br>
-                </form>
-        </div>
-    </div>
-    <script type="text/javascript" language="JavaScript">
-        function searchcheck2() {
+                alert ('สำหรับคนพิการเท่านั้น');
 
-                alert ('เฉพาะคนพิการเท่านั้น');
+        }
+        function editclick(x) {
 
+            window.location = 'c-edit-1.php';
+
+        }
+        function postclick(x) {
+
+            window.location = 'c-postjob.php';
 
         }
 
-
     </script>
 
+    <!-- รูปบริการต่างๆ -->
+    <div class="container">
+
+        <div id="service_img" style="padding:50px;background-image: url('images/findwork.jpg');background-size: 100%;background-position: center;  border-bottom-left-radius: 20px;
+             border-bottom-right-radius: 20px;height:350px">
+
+        </div>
+
+    </div>
+
+
 </section>
+
+
 
 
 <br>
