@@ -20,7 +20,7 @@
             echo "ออกจากระบบเรียบร้อยแล้ว";
             echo "
  				<html>
-   					<meta http-equiv=\"Refresh\" content=\"2; URL=mainpage_pak1.php\">
+   					<meta http-equiv=\"Refresh\" content=\"2; URL=index.php\">
  				</html>
  			"; 
 

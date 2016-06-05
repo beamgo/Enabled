@@ -95,6 +95,7 @@ session_start();
 
 </div>
 <!-- เป้าหมาย -->
+<!-- เป้าหมาย -->
 <section>
     <div class="container" style="padding:100px;">
         <div class="row">
@@ -106,35 +107,36 @@ session_start();
         <div class="row text-center col-sm-12">
             <div class="col-md-4">
                     <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+                        <img src="images/icon_obj_1.png" />
                     </span>
-
-                <h4 class="service-heading">ค้นหางาน</h4>
-                <p class="text-muted">เว็บไซต์ของเรามีงานจากบริษัทกว่า200 งานรอคุณอยู่ หากคุณต้องการที่จะหางาน สามารถค้นหางานได้ที่นี</p>
+                <br>
+                <br>
+                <h4 class="service-heading">พัฒนาความสามารถ</h4>
+                <p class="text-muted">เพื่อพัฒนาความสามารถของคนพิการเพื่อเพิ่มโอกาสในการทำงานให้มากขึ้น</p>
             </div>
             <div class="col-md-4">
                     <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
+                         <img src="images/icon_obj_2.png" width="119" high="118" />
 
-                <h4 class="service-heading">สร้างโปรไฟล์</h4>
-                <p class="text-muted">คุณอยากได้งานที่เงินเดือนสูงใช่ไหม คุณสามารถสร้างโปรไฟล์เพื่อสมัครงานได้ที่นี</p>
+                    </span>
+                <br>
+                <br>
+                <h4 class="service-heading">คนพิการมีงาน</h4>
+                <p class="text-muted">เพื่อให้คนพิการมีงานที่ตรงตามความต้องการและความสามารถของตนเอง</p>
             </div>
             <div class="col-md-4">
                     <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
+                         <img src="images/icon_obj_3.png" width="119" high="118" />
+                        <br>
                     </span>
-
+                <br>
+                <br>
                 <h4 class="service-heading">จ้างงานคนพิการ</h4>
-                <p class="text-muted">ค้นหาคนพิการที่ตรงที่ตรงต่อความสามารถและอยู่ใกล้สถานที่ทำงาน เพื่อความสะดวกของทั้งสองฝ่าย</p>
+                <p class="text-muted">เพื่อให้ผู้ประกอบการได้ร่วมงานกับคนพิการที่มีความสามารถและมีคุณภาพสูง</p>
             </div>
         </div>
     </div>
 </section>
-
 <!-- บริการของเรา -->
 <?php
 $servername = "localhost";

@@ -96,7 +96,7 @@ Header($ExpStr);
 			echo "อีเมลหรือรหัสผ่าน ไม่ถูกต้อง";
 			echo "
  				<html>
-   					<meta http-equiv=\"Refresh\" content=\"3; URL=mainpage_pak1.php\">
+   					<meta http-equiv=\"Refresh\" content=\"3; URL=index.php\">
  				</html>
  			";
 		}
