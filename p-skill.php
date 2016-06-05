@@ -588,7 +588,7 @@ ob_start();
 									</div>
 
 
-										
+
   </div>
 </div>
 
@@ -754,6 +754,8 @@ ob_start();
 
 </div>
 </div>
+</div>
+<div style="height:200px;width:100%">
 </div>
 </body>
 <script>
