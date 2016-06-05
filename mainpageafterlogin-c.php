@@ -59,16 +59,12 @@ session_start();
 
 
 </head>
-<SCRIPT Language="JavaScript">
 
-</SCRIPT>
 <body>
 
 <!-- Navigation -->
 <?php include 'c-navigation.php'; ?>
 
-<br>
-<br>
 
 <!-- Header -->
 <div class="intro-header" style="padding:50px">
@@ -178,20 +174,34 @@ session_start();
     <!-- รูปบริการต่างๆ -->
     <div class="container">
         <div class="intro-header2" style="padding:50px">
-
+            <form name="DD" action=""  method="post">
             <br>
             <br>
 
             <h1 align="left">ค้นหาโอกาสได้งานดีๆ </h1>
             <h1 align="left">จากบริษัทชั้นนำมากมาย</h1>
             <br>
-            <button type="submit" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
+            <button onclick="searchcheck2()" type="button" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
             <br>
+                </form>
         </div>
     </div>
+    <script type="text/javascript" language="JavaScript">
+        function searchcheck2() {
 
+                alert ('เฉพาะคนพิการเท่านั้น');
+
+
+        }
+
+
+    </script>
 
 </section>
+
+
+<br>
+<br>
 <!-- ข่าวสารล่าสุด -->
 
 <div class="container">
@@ -236,114 +246,6 @@ session_start();
         </div>
     </div>
 </div>
-
-<!-- Portfolio Grid Section -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section  class="bg-light-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">ทักษะที่ต้องพัฒนา</h2>
-                <h3 class="section-subheading text-muted">ยังมีอีกหลายทักษะที่คุณต้องพัฒนาเพื่อโอกาสการทำงานที่มากขึ้น</h3>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>สกิลด้านเทคโนโลยี</h4>
-                    <p class="text-muted">ควรพัฒนาทักษะทางด้านโปรแกรม Microsoft office...</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>สกิลด้านกราฟฟิคดีไซน์</h4>
-                    <p class="text-muted">ควรพัฒนาทักษะทางด้านโปรแกรม adobe photoshop...</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>สกิลด้านภาษา</h4>
-                    <p class="text-muted">ควรพัฒนาทักษะทางด้านการเขียนภาษาอังกฤษ...</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/portfolio/golden.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>สกิลด้านการสื่อสาร</h4>
-                    <p class="text-muted">การโน้มน้าวจิตใจคน การชักจูงผู้คน</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/portfolio/escape.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>สกิลความเป็นผู้นำ</h4>
-                    <p class="text-muted">รู้จักบริหารจัดการลูกทีม ควบคุมงาน..</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>สกิลด้านการขับรถ</h4>
-                    <p class="text-muted">มีใบขับขี่</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<br>
-<br>
-
 
 <!-- /.container -->
 

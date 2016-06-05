@@ -217,10 +217,17 @@ session_start();
                 <h1 align="left">ค้นหาโอกาสได้งานดีๆ </h1>
                 <h1 align="left">จากบริษัทชั้นนำมากมาย</h1>
                 <br>
-                <button type="submit" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
+                <button onclick="search()" type="button" class="btn btn-warning btn-lg pull-left">ค้นหางานที่ต้องการ</button>
                 <br>
            </div>
     </div>
+
+    <script type="text/javascript" language="JavaScript">
+        function search(){
+            alert ("กรุณาเข้าสู่ระบบ");
+        }
+
+    </script>
 
     
 </section>
